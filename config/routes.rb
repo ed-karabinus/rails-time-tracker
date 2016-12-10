@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   # Need to set root_url to *something* for Devise
   root 'welcome#index'
 
+  resources :projects
+
+  resources :sessions do
+    resources :comments
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

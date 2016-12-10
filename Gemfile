@@ -35,8 +35,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Devise for user authentication
 gem 'devise'
 
-# Add user authenitcation via Facebook omniauth
+# Add user authentication via Facebook omniauth
 gem 'omniauth-facebook'
+
+# Use FactoryGirl for fixtures
+gem "factory_girl_rails"
+
+# Use RSpec for testing
+gem "rspec-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
