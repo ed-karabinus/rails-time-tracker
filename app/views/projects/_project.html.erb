@@ -1,0 +1,9 @@
+<p>Project name: <%= project.name %></p>
+<p>Project description: <%= project.description %></p>
+
+<p>List of users:</p>
+<ul>
+  <% project.users.each do |user| %>
+    <li><%= user.email %></li>
+  <% end %>
+</ul>

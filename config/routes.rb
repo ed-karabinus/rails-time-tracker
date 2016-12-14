@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get 'projects/:id/new_user' => 'projects#new_user', as: :new_user
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
