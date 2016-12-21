@@ -15,12 +15,14 @@ ActiveRecord::Schema.define(version: 20161203055459) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "session_id"
+    t.integer  "user_id"
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "comments", ["session_id"], name: "index_comments_on_session_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
