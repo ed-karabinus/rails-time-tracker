@@ -16,7 +16,7 @@ RSpec.describe Comment, :type => :model do
   end
 
   it 'validates the presence of content upon creation' do
-    expect { FactoryGirl.create(:comment, :content => "") }.to raise_error
+    expect { FactoryGirl.create(:comment, :content => "") }.to raise_error(/Content can't be blank/)
   end
 
   it 'validates the presence of content on update' do

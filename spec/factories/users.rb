@@ -1,15 +1,12 @@
-FactoryGirl.define do
+FactoryGirl.define do |user|
+  sequence :email do |n|
+    "test_user_#{n}@example.com"
+  end
+
   factory :user do
     name "Test User"
-    email "test_user@example.com"
-  end
-end
-
-FactoryGirl.modify do
-  factory :user do
-    after(:build) { |u| 
-      u.password = "password123" 
-      u.password_confirmation = "password123"
-    }
+    email
+    password "password123"
+    password_confirmation "password123"
   end
 end
