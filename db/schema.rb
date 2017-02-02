@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20161203055459) do
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "session_id"
+    t.integer  "timeblock_id"
     t.integer  "user_id"
     t.string   "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  add_index "comments", ["session_id"], name: "index_comments_on_session_id"
+  add_index "comments", ["timeblock_id"], name: "index_comments_on_timeblock_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "projects", force: :cascade do |t|
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20161203055459) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "sessions", force: :cascade do |t|
+  create_table "timeblocks", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "user_id"
     t.string   "description"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20161203055459) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "sessions", ["project_id"], name: "index_sessions_on_project_id"
-  add_index "sessions", ["user_id"], name: "index_sessions_on_user_id"
+  add_index "timeblocks", ["project_id"], name: "index_timeblocks_on_project_id"
+  add_index "timeblocks", ["user_id"], name: "index_timeblocks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

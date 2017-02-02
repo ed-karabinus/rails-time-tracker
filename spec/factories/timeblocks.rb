@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :session do
+  factory :timeblock do
     project
     user
     description "Test session description."

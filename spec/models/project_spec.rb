@@ -4,8 +4,8 @@ RSpec.describe Project, :type => :model do
   let!(:project) { FactoryGirl.create(:project) }
   let!(:user) { FactoryGirl.create(:user) }
 
-  it 'has sessions' do
-    expect(project).to respond_to(:sessions)
+  it 'has timeblocks' do
+    expect(project).to respond_to(:timeblocks)
   end
 
   it 'has users' do

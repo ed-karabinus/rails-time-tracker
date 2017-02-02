@@ -1,0 +1,3 @@
+class TimeblocksController < ApplicationController
+
+end

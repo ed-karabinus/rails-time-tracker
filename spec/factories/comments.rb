@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :comment do
-    session
+    timeblock
     user
     content "Test Content"
   end

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :projects
 
-  resources :sessions do
+  resources :timeblocks do
     resources :comments
   end
 

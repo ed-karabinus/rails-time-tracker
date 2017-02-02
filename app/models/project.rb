@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
-  has_many :sessions
-  has_many :users, through: :sessions
-  has_many :comments, through: :sessions
+  has_many :timeblocks
+  has_many :users, through: :timeblocks
+  has_many :comments, through: :timeblocks
 
   validates_presence_of :name
 

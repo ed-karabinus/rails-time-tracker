@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
   # Include devise module :omniauthable
   devise :omniauthable, :omniauth_providers => [:facebook]
 
-  has_many :sessions
-  has_many :projects, through: :sessions
+  has_many :timeblocks
+  has_many :projects, through: :timeblocks
   has_many :comments
 
   # Need for user authentication via Facebook Omniauth and Devise

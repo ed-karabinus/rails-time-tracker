@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe Comment, :type => :model do
   let!(:comment) { FactoryGirl.create(:comment) }
 
-  it 'belongs to a session' do
-    expect(comment.session).to be_instance_of(Session)
+  it 'belongs to a timeblock' do
+    expect(comment.timeblock).to be_instance_of(Timeblock)
   end
 
   it 'belongs to a user' do
