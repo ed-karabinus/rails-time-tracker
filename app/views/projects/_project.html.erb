@@ -1,4 +1,4 @@
-<p>Project name: <%= project.name %></p>
+<p><b>Project name: <%= project.name %></b></p>
 <p>Project description: <%= project.description %></p>
 
 <p>List of users:</p>
@@ -7,3 +7,5 @@
     <li><%= user.email %></li>
   <% end %>
 </ul>
+
+<p><a href=<%= new_project_timeblock_path(project) %>>Record a new timeblock for this project.</a></p>

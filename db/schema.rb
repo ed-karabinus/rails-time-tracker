@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20161203055459) do
     t.integer  "project_id"
     t.integer  "user_id"
     t.string   "description"
+    t.datetime "start"
+    t.datetime "end"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

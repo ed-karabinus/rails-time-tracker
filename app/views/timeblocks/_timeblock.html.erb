@@ -1,0 +1,8 @@
+<p>Timeblock description: <%= timeblock.description %></p>
+<p>Timeblock start: <%= timeblock.start %></p>
+<% unless @timeblock.end %>
+  <p><a href=<%= end_project_timeblock_path(project_id: project.id, id: timeblock.id) %>>End timeblock</a></p>
+<% else %>
+  <p>Timeblock end: <%= timeblock.end %></p>
+  <p>Timeblock length: <%= (timeblock.end - timeblock.start).to_i / 60 %> minutes, <%= (timeblock.end - timeblock.start).to_i % 60 %> seconds</p>
+<% end %>

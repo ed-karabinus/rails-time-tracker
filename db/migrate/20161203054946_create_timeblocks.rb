@@ -4,6 +4,8 @@ class CreateTimeblocks < ActiveRecord::Migration
       t.references :project, index: true, foreign_key: true
       t.references :user, index: true, foreign_key: true
       t.string :description
+      t.datetime :start
+      t.datetime :end
 
       t.timestamps null: false
     end

@@ -9,11 +9,13 @@ Rails.application.routes.draw do
   # Need to set root_url to *something* for Devise
   root 'welcome#index'
 
-  resources :projects
-
-  resources :timeblocks do
-    resources :comments
+  resources :projects do
+    resources :timeblocks do
+      resources :comments
+    end
   end
+
+  get 'projects/:project_id/timeblocks/:id/end' => 'timeblocks#end', as: :end_project_timeblock
 
   get 'projects/:id/new_user' => 'projects#new_user', as: :new_user
 
